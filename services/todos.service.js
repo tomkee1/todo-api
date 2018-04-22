@@ -21,7 +21,7 @@ exports.createTodo = async function(todo){
     var newTodo = new ToDo({
         title: todo.title,
         description: todo.description,
-        date: new Date(),
+        date: todo.date,
         status: todo.status
     })
 
@@ -50,6 +50,7 @@ exports.updateTodo = async function(todo){
 
     oldTodo.title = todo.title
     oldTodo.description = todo.description
+    oldTodo.date = todo.date
     oldTodo.status = todo.status
 
 
